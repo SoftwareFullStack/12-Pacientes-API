@@ -1,0 +1,67 @@
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+
+//////////// ESTILOS PERSONALIZADOS //////////////////////
+
+.linkCustom{
+    margin: 0 10px;
+}
+
+.textColorCustom{
+    color: #FFF;
+    transition: color 0.5s;
+}
+
+.textColorCustom:hover{
+    color: #01F0D0;
+}
+
+.btnCustom{
+    width: 180px;
+    background-color: #01F0D0;
+    transition: all 0.5s;
+}
+
+.btnCustom:hover{
+    background-color: #01d3b7;
+}
+
+canvas{
+    max-width: 100%;
+}
+
+.hidden {
+    display: none;
+}
+
+
+.paciantesCustom:hover{
+    background-color: #01F0D0;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.doctor{
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+}
+
+.logoCustom{
+    width: 100px;
+    margin-right: 180px;
+}
+
+
+.listaPacintes{
+    height: calc(78vh);
+}
+
+.datosPacintes{
+    // padding: 0 140px;
+    height: calc(78vh);
+}
+
+.footerCustom{
+    height: 50px;
+}

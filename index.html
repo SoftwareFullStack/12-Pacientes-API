@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="SCSS/custom.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="shortcut icon" href="IMG/icono.png" type="image/x-icon">
+    <title>Pacientes API</title>
+</head>
+
+<body class="container bg-secondary-subtle">
+
+    <!-- LOGO E IMAGEN MÉDICO -->
+    <div class="d-lg-flex d-none justify-content-between bg-dark p-2">
+        <img src="IMG/Logo1.svg" alt="" class="logoCustom">
+        
+        <div class="d-flex justify-content-center align-items-center me-2 text-white">
+            <img src="IMG/dr.jpg" alt="Dr. Jose Simmons" class="doctor me-3">
+            <p class="fw-bold mb-0">Dr. Jose Simmons</p>
+            <p class="mb-0">&nbsp;&nbsp;(Médico General)</p>
+        </div>
+    </div>
+
+
+    <!-- MENU DE NAVEGACIÓN -->
+    <div class="">
+        <nav class="navbar navbar-expand-lg bg-secondary mb-3">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="IMG/Logo2.svg" alt="Bootstrap" width="100" height="60" class="d-block d-lg-none">
+                  </a>
+            <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center mt-2" id="navbarNav">
+                <ul class="navbar-nav ">
+                    <li class="nav-item linkCustom">
+                        <a class="nav-link bi bi-house-door textColorCustom" href="#"> Inicio</a>
+                    </li>
+                    <li class="nav-item linkCustom">
+                        <a class="nav-link bi bi-people textColorCustom" href="#"> Pacientes</a>
+                    </li>
+                    <li class="nav-item linkCustom">
+                        <a class="nav-link bi bi-calendar textColorCustom" href="#"> Cronograma</a>
+                    </li>
+                    <li class="nav-item linkCustom">
+                        <a class="nav-link bi bi-chat-left textColorCustom" href="#"> Mensajes</a>
+                    </li>
+                    <li class="nav-item linkCustom">
+                        <a class="nav-link bi bi-credit-card-2-back textColorCustom" href="#"> Pagos</a>
+                    </li>
+                </ul>
+            </div>
+            
+            </div>
+        </nav>
+    </div>
+    
+
+    <!-- PACIENTES -->
+    <div class="d-flex justify-content-between flex-lg-nowrap flex-wrap gap-3 mb-3 contPacientes">
+        <!-- Lista de pacientes -->
+        <div class="bg-white listaPacintes w-100 overflow-auto pt-0 p-3 rounded">
+
+            <!-- Titulo de la seccion -->
+            <div class="d-flex justify-content-center align-items-center justify-content-between py-4 sticky-top bg-white">
+                <h3 class="fs-4">Pacientes</h3>
+                <a href="#"><i class="bi bi-search fs-5 text-dark"></i></a>
+            </div>
+
+            <!-- pacientes -->
+            <div id="contenedorPacientes" class=""></div>
+        </div>
+
+        <!-- Datos del paciente -->
+        <div class="bg-white datosPacintes w-100 rounded">
+            <div class="d-flex flex-column gap-3 ">
+                <div class="ms-4">
+                    <!-- Foto y Nombre delpaciente -->
+                    <div class="d-flex flex-column justify-content-center align-items-center">
+                        <img src="" class="w-25 py-4 fotografia" id="photo" style="visibility: hidden;"
+                            alt="Foto del pacien">
+                        <p class="fw-bold fs-4" id="nombrePersona" style="visibility: hidden;"></p>
+                    </div>
+
+                    <div class="mb-3">
+                        <div class="d-flex justify-content-center align-items-center justify-content-between">
+                            <div class="d-flex justify-content-center align-items-center">
+                                <i class="bi bi-calendar fs-3 me-3"></i>
+                                <div class="d-flex flex-column">
+                                    <span>Fecha de nacimiento</span>
+                                    <span class="fw-semibold" id="dateBirtd" style="visibility: hidden;"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <div class="d-flex justify-content-center align-items-center justify-content-between">
+                            <div class="d-flex justify-content-center align-items-center">
+                                <i class="bi bi-gender-female fs-3 me-3"></i>
+                                <div class="d-flex flex-column">
+                                    <span>Género</span>
+                                    <span class="fw-semibold" id="gender" style="visibility: hidden;"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <div class="d-flex justify-content-center align-items-center justify-content-between">
+                            <div class="d-flex justify-content-center align-items-center">
+                                <i class="bi bi-telephone fs-3 me-3"></i>
+                                <div class="d-flex flex-column">
+                                    <span>Número de contacto</span>
+                                    <span class="fw-semibold" id="personlaPhone" style="visibility: hidden;"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <div class="d-flex justify-content-center align-items-center justify-content-between">
+                            <div class="d-flex justify-content-center align-items-center">
+                                <i class="bi bi-telephone fs-3 me-3"></i>
+                                <div class="d-flex flex-column">
+                                    <span>Número de emergencia</span>
+                                    <span class="fw-semibold" id="emergencyPhone" style="visibility: hidden;"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <div class="d-flex justify-content-center align-items-center justify-content-between">
+                            <div class="d-flex justify-content-center align-items-center">
+                                <i class="bi bi-shield-check fs-3 me-3"></i>
+                                <div class="d-flex flex-column">
+                                    <span>Proveedor de seguros</span>
+                                    <span class="fw-semibold" id="InsuranceProvider" style="visibility: hidden;"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-center align-items-center pt-5">
+                        <button class="btn btnCustom rounded-pill fw-semibold" id="ShowAllInformatios">Toda la información</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- SALUD DEL PACIENTE -->
+    <div class="">
+            <div class="d-flex flex-column gap-3">
+                <div class="col rounded bg-white p-3">
+                    <div class="col py-4">
+                        <h3 class="fs-5">Historial de diagnósticos</h3>
+                    </div>
+
+                    <div class="col bg-primary-subtle rounded">
+                        <div class="row me-2">
+                            <div class="col-lg-8 col-sm-12">
+                                <div class="d-flex justify-content-sm-between ">
+                                    <h5 class="ms-2 py-2">Presión arterial</h5>
+                                    <div class="mt-1">
+                                        <select id="seleccionMeses"
+                                            class="form-select form-select-sm bg-transparent border-0 ms-2"
+                                            style="width: 150px; cursor: pointer; visibility: hidden;">
+                                            <option class="" value="todosMeses">Todos los meses</option>
+                                            <option class="" value="ultimosMeses">Últimos 6 meses</option>
+                                        </select>
+                                    </div>
+
+                                </div>
+                                <canvas id="bloodPressureChart" style="visibility: hidden;"></canva>
+                            </div>
+
+                            <div class="col-lg-4 col-sm-12 mt-4">
+                                <!-- sistolica -->
+                                <div class="ms-3">
+                                    <p class="fw-medium text-primary">Sistólica</p>
+                                    <p class="fw-bold fs-4" id="promedioSistolica" style="visibility: hidden;"></p>
+                                    <p id="comparacionSistolica" style="visibility: hidden;"></p>
+                                </div>
+                                <hr>
+                                <!-- diastolica -->
+                                <div class="ms-3">
+                                    <p class="fw-medium text-danger">Diastólica</p>
+                                    <p class="fw-bold fs-4" id="promedioDiastolica" style="visibility: hidden;"></p>
+                                    <p id="comparacionDiastolica" style="visibility: hidden;"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-3 gap-3 d-flex justify-content-around flex-lg-nowrap flex-wrap">
+                        <div class="rounded bg-info-subtle w-100 ps-3">
+                            <img src="IMG/respiratory.svg" alt="respiratory" class="my-3">
+                            <p class="fw-medium">Frecuencia respiratoria</p>
+                            <p class="fw-bold fs-3"><span id="promedioRespiratoria"
+                                        style="visibility: hidden;"></span> bpm</p>
+                            <p id="comparacionRespiratoria" style="visibility: hidden;"></p>
+                        </div>
+
+                        <div class="rounded bg-warning-subtle w-100 ps-3">
+                            <img src="IMG/temperature.svg" alt="respiratory" class="my-3">
+                            <p class="fw-medium">Temperatura</p>
+                            <p class="fw-bold fs-3"><span id="promedioTemperatura"
+                                      style="visibility: hidden;"></span> °F</p>
+                            <p id="comparacionTemperatura" style="visibility: hidden;"></p>
+                        </div>
+
+                        <div class="rounded bg-danger-subtle w-100 ps-3">
+                            <img src="IMG/Heart.svg" alt="respiratory" class="my-3">
+                            <p class="fw-medium">Ritmo cardiaco</p>
+                            <p class="fw-bold fs-3"><span id="promedioHeardRate" style="visibility: hidden;"></span>
+                                    bpm</p>
+                            <p id="comparacionHeardRate" style="visibility: hidden;"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lista de diagnósticos -->
+                <div class="col rounded bg-white p-3">
+                    <div class="col py-4">
+                        <h3 class="fs-5">Lista de diagnósticos</h3>
+                    </div>
+                    <!-- Tabla -->
+                    <div class="table-responsive-sm">
+                        <table class="table table-hover" id="diagnosticTable" style="visibility: hidden;">
+                        <thead class="table-light">
+                            <tr>
+                                <th scope="col" class="text-start">Problema <br> Diagnóstico</th>
+                                <th scope="col">Descripción</th>
+                                <th scope="col">Estado</th>
+                            </tr>
+                        </thead>
+                        <tbody id="diagnosticList"></tbody>
+                    </table>
+                    </div>
+                </div>
+
+                <!-- Lista de aboratorios -->
+                <div class="col rounded bg-white p-3">
+                    <div class="d-flex justify-content-center align-items-center justify-content-between py-4">
+                        <h3 class="fs-5">Resultados de laboratorio</h3>
+                    </div>
+    
+                    <div class="" id="labsResuts" style="visibility: hidden;">
+                    </div>
+                </div>
+            </div>      
+    </div>
+
+
+    <!-- FOOTER -->
+    <footer class="bg-dark text-white text-center mt-2 d-flex justify-content-center align-items-center footerCustom">
+        <p class="mb-0">© 2024. Alfonso Ospino Silvera</p>
+    </footer>
+       
+    
+
+
+    <!-- MY JS -->
+    <script type="module" src="JS/script.js"></script>
+
+   <!-- Bootstrap JS -->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+
+    <!--CHAR JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"
+        integrity="sha512-CQBWl4fJHWbryGE+Pc7UAxWMUMNMWzWxF4SQo9CgkJIN1kx6djDQZjh3Y8SZ1d+6I+1zze6Z7kHXO7q3UyZAWw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</body>
+</html>
