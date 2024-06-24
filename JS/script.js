@@ -241,7 +241,7 @@ const obtenerDatos = async () => {
                   <span>${laboratorio}</span>
                 </div>
               </div>
-              <a href="#"><i class="bi bi-download fs-4 text-dark"></i></a>
+              <a href="#" class="bi bi-file-earmark-arrow-down-fill fs-4 text-dark"></a>
             </div>
           </div>
         `;
