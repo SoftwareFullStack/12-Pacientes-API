@@ -3,10 +3,12 @@
 
 //////////// ESTILOS PERSONALIZADOS //////////////////////
 
+// estilos para los li
 .linkCustom{
     margin: 0 10px;
 }
 
+// estilos para los links o enlaces
 .textColorCustom{
     color: #FFF;
     transition: color 0.5s;
@@ -16,58 +18,60 @@
     color: #01F0D0;
 }
 
-.btnCustom{
-    width: 180px;
-    background-color: #01F0D0;
-    transition: all 0.5s;
-}
-
-.btnCustom:hover{
-    background-color: #01d3b7;
-}
-
+// esilos para el canvas del grafico
 canvas{
     max-width: 100%;
 }
 
-.hidden {
-    display: none;
-}
-
-
+// estilos para cada paciente al pasar el cursor
 .paciantesCustom:hover{
     background-color: #01F0D0;
     cursor: pointer;
     border-radius: 10px;
 }
 
+// estilos para la IMG del DR en el banner
 .doctor{
     width: 90px;
     height: 90px;
     border-radius: 50%;
 }
 
+// estilos para mi logo
 .logoCustom{
     width: 100px;
     margin-right: 180px;
 }
 
-
+// estilos para el tamaño del contenedor de la lista de pacientes
 .listaPacintes{
     height: calc(78vh);
 }
 
+// estilos para el tamaño del contenedor de los datos del pacientes
 .datosPacintes{
-    // padding: 0 140px;
     height: calc(78vh);
 }
 
+// estilos para el footer
 .footerCustom{
     height: 70px;
 }
 
+// estilos para la lista de laboratorios al pasar el cursor
+.laboratorioCustom:hover{
+    background-color: #e9e9e9;
+}
 
-/* ESTILOS NUEVA PAGINA  */
+// estilos para que la IMG del paciente se haga mas grande en pantallas pequeñas
+@media (max-width: 576px) {
+    .w-sm-50 {
+        width: 50% !important;
+    }
+}
+
+
+//////////// ESTILOS PARA LA NUEVA PAGINA /////////////////////
 
 .textNota {
     color: #007bff;

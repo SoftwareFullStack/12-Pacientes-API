@@ -11978,22 +11978,8 @@ textarea.form-control-lg {
   color: #01F0D0;
 }
 
-.btnCustom {
-  width: 180px;
-  background-color: #01F0D0;
-  transition: all 0.5s;
-}
-
-.btnCustom:hover {
-  background-color: #01d3b7;
-}
-
 canvas {
   max-width: 100%;
-}
-
-.hidden {
-  display: none;
 }
 
 .paciantesCustom:hover {
@@ -12025,7 +12011,15 @@ canvas {
   height: 70px;
 }
 
-/* ESTILOS NUEVA PAGINA  */
+.laboratorioCustom:hover {
+  background-color: #e9e9e9;
+}
+
+@media (max-width: 576px) {
+  .w-sm-50 {
+    width: 50% !important;
+  }
+}
 .textNota {
   color: #007bff;
   font-weight: bold;
